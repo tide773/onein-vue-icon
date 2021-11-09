@@ -13,7 +13,7 @@ const getAttrs = (style) => {
   const strokeAttrs = {
     ":stroke": "color",
     fill: "none",
-    "stroke-width": 2,
+    "stroke-width": 1,
     "stroke-linecap": "round",
     "stroke-linejoin": "round",
   };
