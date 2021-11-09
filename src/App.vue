@@ -55,7 +55,7 @@ export default {
 }
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 .container {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -81,7 +81,7 @@ body {
   padding: 20px;
   border-radius: 6px;
   cursor: pointer;
-  color: #486491;
+  color: #000000;
   transition: background-color 0.2s;
 }
 .item:hover {
