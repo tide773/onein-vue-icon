@@ -10,7 +10,7 @@
         @click="copyName(iconComponentName)"
       >
         <component :is="iconComponentName" :size="36" />
-        <div>{{ iconComponentName }}</div>
+        <div class="name">{{ iconComponentName }}</div>
       </li>
     </ul>
   </div>
@@ -89,5 +89,10 @@ body {
 }
 .item svg {
   margin-bottom: 12px;
+}
+.name {
+  text-align: center;
+  word-break: break-word;
+  height: 36px;
 }
 </style>
