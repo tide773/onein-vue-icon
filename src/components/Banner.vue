@@ -3,12 +3,12 @@
     <h1 class="banner">Onein Vue Icon</h1>
     <div class="code">
       <div>
-        <h3>安装</h3>
-        <pre><code>npm install onein-vue-icon --save<br />yarn add onein-vue-icon</code></pre>
+        <h3>Installation & Upgradation</h3>
+        <pre><code>yarn add onein-vue-icon<br />yarn upgrade onein-vue-icon@0.2.0</code></pre>
       </div>
       <div>
-        <h3>使用</h3>
-        <pre><code>import { OiHome } from 'onein-vue-icon'<br />&lt;OiHome :size="36" color="#009C22" /&gt;</code></pre>
+        <h3>Usage</h3>
+        <pre><code>import { OiHome } from 'onein-vue-icon'<br />&lt;OiHome :size="18" color="#009C22" /&gt;</code></pre>
       </div>
     </div>
   </div>
