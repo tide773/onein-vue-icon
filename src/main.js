@@ -1,21 +1,21 @@
-import Vue from "vue"
-import App from "./App.vue"
-import * as icons from './index.js'
-import Message from 'vue-m-message'
-import 'vue-m-message/dist/index.css'
+import Vue from "vue";
+import App from "./App.vue";
+import * as icons from "./index.js";
+import Message from "vue-m-message";
+import "vue-m-message/dist/index.css";
 
-const iconNames = []
+const iconNames = [];
 
-if (typeof Vue !== 'undefined') {
+if (typeof Vue !== "undefined") {
   for (const name in icons) {
-    Vue.component(name, icons[name])
-    iconNames.push(name)
+    Vue.component(name, icons[name]);
+    iconNames.push(name);
   }
 }
 
-Vue.use(Message)
-Vue.prototype.ICON_NAMES = iconNames
+Vue.use(Message);
+Vue.prototype.ICON_NAMES = iconNames;
 
 new Vue({
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

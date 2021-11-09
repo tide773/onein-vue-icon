@@ -8,7 +8,7 @@
   </template>
   <script>
     export default {
-      name: "IconFilter",
+      name: "OiFilter",
       props: {
         size: {
           type: Number,

@@ -1,25 +1,29 @@
 const getAttrs = (style) => {
   const baseAttrs = {
-    'xmlns': 'http://www.w3.org/2000/svg',
-    ':width': 'size',
-    ':height': 'size',
-    'viewBox': '0 0 24 24',
-    'aria-hidden': 'true',
-    'v-on': '$listeners'
-  }
+    xmlns: "http://www.w3.org/2000/svg",
+    ":width": "size",
+    ":height": "size",
+    viewBox: "0 0 24 24",
+    "aria-hidden": "true",
+    "v-on": "$listeners",
+  };
   const fillAttrs = {
-    ':fill': 'color'
-  }
+    ":fill": "color",
+  };
   const strokeAttrs = {
-    ':stroke': 'color',
-    'fill': 'none',
-    'stroke-width': 2,
-    'stroke-linecap': 'round',
-    'stroke-linejoin': 'round'
-  }
-  return Object.assign({}, baseAttrs, style==='fill' ? fillAttrs : strokeAttrs)
-}
-  
+    ":stroke": "color",
+    fill: "none",
+    "stroke-width": 2,
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+  };
+  return Object.assign(
+    {},
+    baseAttrs,
+    style === "fill" ? fillAttrs : strokeAttrs
+  );
+};
+
 const getElementCode = (ComponentName, attrs, svgCode) => `
   <template>
     <svg
@@ -30,7 +34,7 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
   </template>
   <script>
     export default {
-      name: "${ComponentName}",
+      name: "Oi${ComponentName}",
       props: {
         size: {
           type: Number,
@@ -43,6 +47,6 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
       }
     };
   </script>
-`
+`;
 
-module.exports = { getAttrs, getElementCode }
+module.exports = { getAttrs, getElementCode };
