@@ -5,7 +5,7 @@ const getAttrs = (style) => {
     ":height": "size",
     viewBox: "0 0 24 24",
     "aria-hidden": "true",
-    "v-on": "$listeners",
+    "v-bind": "$attrs",
   };
   const fillAttrs = {
     ":fill": "color",

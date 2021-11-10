@@ -17,35 +17,37 @@
 </template>
 
 <script>
-import 'normalize.css'
-import Banner from './components/Banner'
+import { defineComponent, getCurrentInstance, reactive } from "vue";
+import "normalize.css";
+import Banner from "./components/Banner";
 
-export default {
+export default defineComponent({
   name: "App",
   components: {
-    Banner
+    Banner,
   },
-  data() {
-    return {
-      iconNames: this.ICON_NAMES
-    }
-  },
-  methods: {
-    copyName(name) {
-      const input = document.createElement('input')
-      input.setAttribute('readonly', 'readonly')
-      input.setAttribute('value', name)
-      document.body.appendChild(input)
-      input.setSelectionRange(0, 9999)
-      input.select()
-      if (document.execCommand('copy')) {
-        document.execCommand('copy')
+  setup() {
+    const { proxy } = getCurrentInstance();
+    const iconNames = reactive(proxy.$ICON_NAMES);
+    const copyName = (name) => {
+      const input = document.createElement("input");
+      input.setAttribute("readonly", "readonly");
+      input.setAttribute("value", name);
+      document.body.appendChild(input);
+      input.setSelectionRange(0, 9999);
+      input.select();
+      if (document.execCommand("copy")) {
+        document.execCommand("copy");
       }
-      document.body.removeChild(input)
-      this.$message.success('复制成功')
-    }
-  }
-};
+      document.body.removeChild(input);
+      proxy.$toast?.success(`复制成功`);
+    };
+    return {
+      iconNames,
+      copyName,
+    };
+  },
+});
 </script>
 
 <style lang="css">
