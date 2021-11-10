@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="banner">Onein Vue Icon</h1>
+    <h1 class="banner">Onein Vue Icon -「vue3」</h1>
     <div class="code">
       <div>
         <h3>Installation & Upgradation</h3>
@@ -13,13 +13,11 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  name: "Banner"
+  name: "Banner",
 };
 </script>
-
 <style lang="css">
 .banner {
   padding-top: 30px;

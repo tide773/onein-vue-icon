@@ -1,21 +1,19 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import * as icons from "./index.js";
-import Message from "vue-m-message";
-import "vue-m-message/dist/index.css";
+import Toaster from "@meforma/vue-toaster";
 
+const app = createApp(App);
 const iconNames = [];
-
-if (typeof Vue !== "undefined") {
-  for (const name in icons) {
-    Vue.component(name, icons[name]);
-    iconNames.push(name);
-  }
+for (const name in icons) {
+  app.component(name, icons[name]);
+  iconNames.push(name);
 }
-
-Vue.use(Message);
-Vue.prototype.ICON_NAMES = iconNames;
-
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+app.config.globalProperties.$ICON_NAMES = iconNames;
+app
+  .use(Toaster, {
+    position: "top",
+    duration: 2000,
+    max: 1,
+  })
+  .mount("#app");
