@@ -36,5 +36,8 @@
     "core-js": "^3.6.5",
     "eslint-plugin-vue": "^7.0.0",
     "uppercamelcase": "^3.0.0"
+  },
+  "config": {
+    "framework": "vue"
   }
 }
