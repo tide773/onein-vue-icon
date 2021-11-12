@@ -90,7 +90,7 @@ body {
   background-color: #e7ecf3;
 }
 .item svg {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .name {
   text-align: center;
