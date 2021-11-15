@@ -8,7 +8,7 @@
       </div>
       <div>
         <h3>Usage</h3>
-        <pre><code>import { OiHome } from 'onein-vue-icon'<br />&lt;OiHome :size="18" color="#009C22" /&gt;</code></pre>
+        <pre><code>import { OiHome } from 'onein-vue-icon'<br />&lt;OiHome :size="18" color="#009C22" stroke-width="1"/&gt;</code></pre>
       </div>
     </div>
   </div>
