@@ -33,7 +33,9 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
     </svg>
   </template>
   <script>
-    export default {
+    import { defineComponent } from "vue";
+
+    export default defineComponent({
       name: "Oi${ComponentName}",
       props: {
         size: {
@@ -45,7 +47,7 @@ const getElementCode = (ComponentName, attrs, svgCode) => `
           default: "currentColor"
         }
       }
-    };
+    });
   </script>
 `;
 

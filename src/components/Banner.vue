@@ -4,7 +4,7 @@
     <div class="code">
       <div>
         <h3>Installation & Upgradation</h3>
-        <pre><code>yarn add onein-vue-icon<br />yarn upgrade onein-vue-icon@0.2.0</code></pre>
+        <pre><code>yarn add onein-vue-icon<br />yarn upgrade onein-vue-icon@版本号</code></pre>
       </div>
       <div>
         <h3>Usage</h3>
