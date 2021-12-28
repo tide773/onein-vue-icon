@@ -1,9 +1,9 @@
 
   <template>
     <svg
-      xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 24 24" aria-hidden="true" v-bind="$attrs" :stroke="color" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 24 24" aria-hidden="true" :stroke="color" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
     >
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path>
+      <path d="M20 2v20H4V2h16z"></path><path d="M14 9.5h2"></path><path d="M8 9.5h2"></path><path d="M11 10.5a1 1 0 100-2 1 1 0 000 2z"></path><path d="M8 14.5h2"></path><path d="M14 14.5h2"></path><path d="M13 15.5a1 1 0 100-2 1 1 0 000 2z"></path>
     </svg>
   </template>
   <script>

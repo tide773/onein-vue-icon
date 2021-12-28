@@ -1,4 +1,4 @@
-const Svgo = require("svgo");
+// const Svgo = require("svgo");
 const cheerio = require("cheerio");
 const framework = process.env.npm_package_config_framework || "vue";
 console.log(framework);
@@ -17,17 +17,18 @@ function CamelCase(str) {
  * @returns {Promise<string>}
  */
 function optimize(svg) {
-  const svgo = new Svgo({
-    plugins: [
-      { convertShapeToPath: false },
-      { mergePaths: false },
-      { removeAttrs: { attrs: "(fill|stroke.*)" } },
-      { removeTitle: true },
-    ],
-  });
+  // const svgo = new Svgo({
+  //   plugins: [
+  //     { convertShapeToPath: false },
+  //     { mergePaths: false },
+  //     { removeAttrs: { attrs: "(fill|stroke.*)" } },
+  //     { removeTitle: true },
+  //   ],
+  // });
 
   return new Promise((resolve) => {
-    svgo.optimize(svg).then(({ data }) => resolve(data));
+    // svgo.optimize(svg).then(({ data }) => resolve(data));
+    resolve(svg);
   });
 }
 
