@@ -1,9 +1,9 @@
 
   <template>
     <svg
-      xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 24 24" aria-hidden="true" v-bind="$attrs" :stroke="color" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      xmlns="http://www.w3.org/2000/svg" :width="size" :height="size" viewBox="0 0 24 24" aria-hidden="true" :stroke="color" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
     >
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.093 2.58A1 1 0 012 2h20a1 1 0 01.764 1.646L15 12.826V21a1 1 0 01-1.447.894l-4-2A1 1 0 019 19v-6.174l-7.764-9.18a1 1 0 01-.143-1.067zM4.155 4l6.609 7.814a1 1 0 01.236.646v5.922l2 1V12.46a1 1 0 01.236-.646L19.845 4H4.155z"></path>
+      <path d="M3 12.003a8.885 8.885 0 013.844-7.361c.818-.573 2.209-.736 2.7 0 .817.981-.655 2.454 0 3.271 1.635 1.963 4.989-1.88 8.996 0 2.863 1.473 2.454 5.153 2.127 6.544-1.064 3.762-4.58 6.543-8.67 6.543A8.971 8.971 0 013 12.003z"></path><path d="M16.087 13.639a1.636 1.636 0 100-3.272 1.636 1.636 0 000 3.272z"></path><path d="M6.272 12.82a.818.818 0 100-1.635.818.818 0 000 1.636z"></path><path d="M8.316 16.91a.818.818 0 100-1.635.818.818 0 000 1.635z"></path><path d="M12.815 18.546a.818.818 0 100-1.636.818.818 0 000 1.636z"></path>
     </svg>
   </template>
   <script>
