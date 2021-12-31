@@ -1,4 +1,4 @@
-// const Svgo = require("svgo");
+const { optimize } = require("svgo");
 const cheerio = require("cheerio");
 const framework = process.env.npm_package_config_framework || "vue";
 console.log(framework);
@@ -16,19 +16,33 @@ function CamelCase(str) {
  * @param {string} svg - An SVG string.
  * @returns {Promise<string>}
  */
-function optimize(svg) {
-  // const svgo = new Svgo({
-  //   plugins: [
-  //     { convertShapeToPath: false },
-  //     { mergePaths: false },
-  //     { removeAttrs: { attrs: "(fill|stroke.*)" } },
-  //     { removeTitle: true },
-  //   ],
-  // });
-
+function optimizeSvg(svg) {
   return new Promise((resolve) => {
-    // svgo.optimize(svg).then(({ data }) => resolve(data));
-    resolve(svg);
+    let res = optimize(svg, {
+      plugins: [
+        "removeTitle",
+        {
+          name: "removeAttrs",
+          params: {
+            attrs: "(fill|stroke.*)",
+          },
+        },
+        // 1.x version config
+        // { removeTitle: true },
+        // { removeAttrs: { attrs: "(fill|stroke.*)" } },
+        // // disabled
+        // { sortAttrs: false },
+        // { mergePaths: false },
+        // { collapseGroups: false },
+        // { removeStyleElement: false },
+        // { convertShapeToPath: false },
+        // { removeRasterImages: false },
+        // { transformsWithOnePath: false },
+        // { removeUnknownsAndDefaults: false },
+        // { removeUselessStrokeAndFill: false },
+      ],
+    });
+    resolve(res.data);
   });
 }
 
@@ -50,7 +64,7 @@ function removeSVGElement(svg) {
  * @param {Promise<string>}
  */
 async function processSvg(svg) {
-  const optimized = await optimize(svg)
+  const optimized = await optimizeSvg(svg)
     // remove semicolon inserted by prettier
     // because prettier thinks it's formatting JSX not HTML
     .then((svg) => svg.replace(/;/g, ""))
