@@ -19,7 +19,7 @@
     "@meforma/vue-toaster": "^1.2.2",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
-    "vue": "^3.2.20"
+    "vue": "^3.2.24"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
