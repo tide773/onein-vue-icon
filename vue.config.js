@@ -1,5 +1,5 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/onein-vue-icon/'
+    ? '/onein-vue3-icon/'
     : '/'
 }
